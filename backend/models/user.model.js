@@ -24,7 +24,9 @@ const userSchema = new mongoose.Schema({
     type: String,
     default: "",
   },
-});
+}, 
+//memver since => user.createdAt and user.updatedAt will be available
+{timestamps: true});
 
 const User = mongoose.model("User", userSchema); //"User" is the name of the collection in the database and is singular
 //User is the model and userSchema is the schema of the model
